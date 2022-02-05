@@ -1,0 +1,794 @@
+{%load static %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+	<title>User_Homepage</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+
+	<link href="{% static 'styles/bootstrap.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'styles/style.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'styles/font-awesome.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'styles/responsive.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'styles/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'styles/animate.css' %}" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="{% static 'scripts/jquery.1.8.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/bootstrap.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/jquery-scrolltofixed.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/jquery.easing.1.3.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/jquery.isotope.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/wow.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/classie.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/magnific-popup.js' %}"></script>
+	<script src="%{ static'contactform/contactform.js' %}"></script>
+<style type="text/css">
+.fl-lt {float:left;}
+.fl-rt {float:right;}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.xyz{
+	background-image: url('{% static "images2.jpg" %}');
+	background-position: center;
+	background-repeat: no-repeat;
+ 	background-size: 100% 100%;
+}
+
+.ara{
+	background-image: url('{% static "contact_bg1.jpg" %}');
+	background-position: center;
+	background-repeat: no-repeat;
+ 	background-size: cover;
+}
+
+.figure{ margin:0px;}
+
+img{ max-width:100%;}
+
+a, a:hover, a:active{ outline:0px}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('{% static "/fonts/fontawesome-webfont.eot?v=4.1.0" %}');
+  src: url('{% static "/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0" %}') format('embedded-opentype'), url('{% static "/fonts/fontawesome-webfont.woff?v=4.1.0" %}') format('woff'), url('{% static "../fonts/fontawesome-webfont.ttf?v=4.1.0" %}') format('truetype'), url('{% static "../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular" %}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+	background:#fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	color:#888888;
+	margin:0;
+}
+h2{
+	font-size:40px;
+	color:#222222;
+	font-family: 'Times', sans-serif;
+	font-weight:700;
+	letter-spacing: 0.5px;
+	margin:0 0 15px 0;
+	text-align:center;
+	text-transform:uppercase;
+}
+h3{
+	font-family: 'Open Sans', sans-serif;
+	color:#222222;
+	font-weight: bold;
+	font-size:25px;
+	margin:0 0 5px 0;
+	text-transform:uppercase;
+}
+h6{
+	font-size:16px;
+	color:#888888;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+	text-align:center;
+	margin:0 0 60px 0;
+}
+p{
+	line-height:24px;
+	margin:0;
+}
+.header{
+	text-align:center;
+	padding:280px 0;
+	margin-top:-5px;
+}
+.logo{
+	width:200px;
+	margin-top:-50px;
+	margin-left:445px;
+	padding-bottom: 50px;
+}
+.header h1{
+	font-family: 'Montserrat',sans-serif;
+	font-size:70px;
+	font-weight:600;
+	letter-spacing: -1px;
+	margin:0 0 22px 0 ;
+	color:#DAD7D6 ;
+}
+
+.we-create{
+	padding:0;
+	margin:35px 0 55px;
+}
+.wp-pic{
+	margin-bottom:20px;
+}
+.we-create li{
+	display:inline-block;
+	font-family: 'Montserrat',sans-serif;
+	font-size:14px;
+	color: #bcbcbc;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin:0 5px 0 0;
+	padding:0 0 0 15px;
+}
+.we-create li:first-child{
+	background:none;
+}
+
+.start-button {
+	padding-left: 0px;
+}
+
+.start-button li a{
+color: #fff;
+}
+
+
+.link{
+	padding:15px 30px;
+	background:#000;
+	color:#fff;
+	font-size:23px;
+	font-weight:500;
+	font-family: 'Montserrat', sans-serif;
+	display:inline-block;
+	border-radius:8px;
+	text-transform:uppercase;
+	line-height:25px;
+	margin-bottom:20px;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+.link #service-list-main{
+	padding:15px 35px;
+	background:#000;
+	color:#fff;
+	font-size:20px;
+	font-weight:500;
+	font-family: 'Courier', sans-serif;
+	display:inline-block;
+	border-radius:5px;
+	text-transform:uppercase;
+	line-height:25px;
+	margin-bottom:20px;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+.link:hover {
+	text-decoration:none;
+	color:#fff;
+	background:#000;
+}
+
+.link:active, .link:focus {
+	background:#000;
+	text-decoration:none;
+	color:#fff;
+}
+
+.main-nav-outer{
+	padding:7px;
+	box-shadow:0 4px 5px -3px #ececec;
+	position:relative;
+	background:#fff;
+}
+.main-nav{
+	text-align:center;
+	margin:10px 0 0px;
+	padding:0;
+	list-style:none;
+}
+.main-nav li{
+	display:inline;
+	margin:0 10px;
+	border-right: 1px solid grey;
+}
+.main-nav li a{
+	display:inline-block;
+	color:#000;
+	text-transform:uppercase;
+	font-family: 'Courier', sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height:20px;
+	margin:17px 32px;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.main-nav li a:hover{
+	text-decoration:none;
+	color: #7cc576;
+}
+
+.small-logo{
+	padding:0 32px;
+}
+
+.main-section{
+	padding:90px 0 110px;
+}
+
+.service-list{
+	padding:0 0 0 0;
+	font-size:14px;
+	margin-bottom:40px;
+	margin-left: 275px;
+}
+.service-list-col1{
+	float:left;
+	width:60px;
+}
+.service-list-col1 i{
+	font-style:normal;
+	font-size:38px;
+	display:block;
+	color:#222;
+	font-family: 'FontAwesome';
+	line-height:38px;
+}
+.service-list-col2{
+	overflow:hidden;
+
+}
+.main-section.alabaster{
+	background:#fafafa;
+}
+
+/* Featured Work
+---------------------------------*/
+.featured-work{
+	font-size:14px;
+}
+.featured-work h2{
+	text-align:left;
+}
+.featured-box{
+	padding:0 0 0 0;
+	margin-bottom:25px;
+	font-size:14px;
+}
+.featured-box h3{
+	margin-bottom:5px;
+}
+.featured-box p{
+	line-height:22px;
+}
+.featured-work p.padding-b{
+	padding-bottom:35px;
+}
+.featured-box-col1{
+	width:60px;
+	float:left;
+}
+.featured-box-col1 i{
+	display:block;
+	line-height:38px;
+	font-family: 'FontAwesome';
+	font-size:38px;
+	color:#777777;
+	font-style:normal;
+}
+.featured-box-col2{ overflow:hidden;}
+.featured-box.magic{
+	background:url('{% static 'magic.png' %}') left top no-repeat;
+}
+.featured-box.packaged{
+	background:url('{% static 'packaged.png' %}') left top no-repeat;
+}
+.featured-box.seo{
+	background:url('{% static 'seo.png' %}') left top no-repeat;
+}
+.Learn-More{
+	display:inline-block;
+	padding:0 5px 0 0;
+	color:#7cc576;
+	font-size:16px;
+	text-transform:uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:400;
+	line-height:24px;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+	display: none;
+}
+.Learn-More i{
+	padding-right:15px;
+}
+
+.Learn-More:hover, .Learn-More:focus{
+	text-decoration:none;
+	color: #111;
+}
+
+
+
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.6s;
+     -moz-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+.main-section.paddind{
+	padding-bottom:60px;
+}
+
+/* Footer
+---------------------------------*/
+
+
+.footer-logo{
+	margin:15px auto 35px;
+	width: 76px;
+}
+.copyright, .credits{
+	color:#cccccc;
+	font-size:14px;
+	display:block;
+	text-align:center;
+}
+.copyright a, .credits a{
+	color:#7cc576;
+	font-weight:600;
+	text-decoration: none;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.copyright a:hover, .credits a:hover {
+	color: #fff;
+}
+
+.res-nav_click {
+	line-height:38px;
+	font-family: 'FontAwesome';
+	font-size:38px;
+	text-decoration: none !important;
+	color:#777777;
+	font-style:normal;
+	display:none;
+	width:42px;
+	height:27px;
+	margin:20px auto;
+	transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.res-nav_click:hover, .res-nav_click:active, .res-nav_click:focus {
+	color: #7cc576 !important;
+}
+
+.portfolioContainer{
+	max-width: 1140px;
+}
+
+.delay-02s {
+	animation-delay: 0.2s;
+	-webkit-animation-delay: 0.2s;
+}
+.delay-03s {
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}
+.delay-04s {
+	animation-delay: 0.4s;
+	-webkit-animation-delay: 0.4s;
+}
+
+.delay-05s {
+	animation-delay: 0.5s;
+	-webkit-animation-delay: 0.5s;
+}
+.delay-06s {
+	animation-delay: 0.6s;
+	-webkit-animation-delay: 0.6s;
+}
+
+.delay-07s {
+	animation-delay: 0.7s;
+	-webkit-animation-delay: 0.7s;
+}
+.delay-08s {
+	animation-delay: 0.8s;
+	-webkit-animation-delay: 0.8s;
+}
+
+.delay-09s {
+	animation-delay: 0.9s;
+	-webkit-animation-delay: 0.9s;
+}
+.delay-1s {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+}
+.delay-12s {
+	animation-delay: 1.2s;
+	-webkit-animation-delay: 1.2s;
+}
+     ul {
+    overflow: auto;
+}
+
+ul li {
+    list-style-type: none;
+    float: left;
+}
+
+ul li a i {
+    background: #205D7A;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+.fa-facebook {
+    background:#3b5998
+}
+.fa-linkedin {
+    background:#007bb6
+}
+.fa-twitter {
+    background:#00aced
+}
+.google-plus {
+    background:#F02A2A
+}
+ul li a i:hover {
+    opacity: .7;
+}
+</style>
+</head>
+
+<body>
+	<div class="ara">
+	<header class="header" id="header">
+		<div style="margin-top:-180px;" class="container">
+			<figure class="logo animated fadeInDown delay-03s">
+				<a href="#"><img src="{% static '/PMS.png' %}" alt=""></a>
+			</figure>
+			<h1 class="we-create animated fadeInUp delay-03s">ARA Intelligent Parking Management System</h1>
+			<ul class="we-create animated fadeInUp delay-07s">
+				<li style="font-size:23px;font-weight:500;font-style: italic">Aiming towards automating parking management facilities</li>
+			</ul>
+			<div>
+
+			{% autoescape off %}
+	            <h1 style="font-family:'Trebuchet MS',sans-serif"> Welcome {{ username }} ! </h1>
+                {% endautoescape %}
+
+            <a class="link animated fadeInUp delay-07s servicelink" href="#test">Let's Begin</a>
+
+
+
+			</div>
+		</div>
+	</header>
+	</div>
+
+	<nav class="main-nav-outer" id="test">
+		<div class="container">
+			<ul class="main-nav" id="main-nav">
+				<li><a href="#service">Home</a></li>
+				<li><a href="#service1">Services</a></li>
+				<li><a href="#client">Clients</a></li>
+				<li><a href="#service2">Team</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+
+		</div>
+	</nav>
+
+	<div class="xyz" style="margin-top: 2px;">
+	<section class="main-section" id="service" >
+		<div class="container" style="background-color:#CCCACA; border-radius: 8px;"> <br>
+			<h2 style="word-spacing: 8px;">ARA INTELLIGENT PARKING SOLUTIONS</h2><br><br>
+			<div class="well well-lg" style="margin-top: -20px;">
+			<h3>The smart way to park</h3><br>
+			<div class="row">
+			<div class="col-lg-6">ARA Intelligent Parking Management System makes use of the full potential of digitalization: smart sensors, intelligent software, and clever and neat analysis of the available data. The system eliminates the development of parking-related traffic and ensures efficient and optimum utilization of urban parking facilities. This saves time, reduces the impact of traffic on the environment and improves the quality of life in urban cities.
+			</div>
+			<div class="col-lg-6">
+				<img style="margin-top: -40px;" src="{% static 'carpark.jpg' %}" >
+			</div>
+		</div>
+	</div><br>
+		<div class="well well-lg" >
+			<h3 style="margin-left:560px;">Suspicious Activity Detection</h3><br>
+			<div class="row">
+				<div class="col-lg-6">
+				<img style="margin-top: -10px;" src="{% static 'suspicious-activity.jpg' %}" height="250" width="600">
+			</div>
+			<div class="col-lg-6">The ARA Intelligent Parking Management System has been developed for public safety as it is capable of detecting suspicious people or activities in realtime. On the basis of lightweight human object detection and tracking algorithms, the ARA Intelligent Parking Management Systema advances proactive surveillance system design through SVAS which can be deployed with respect to automatic recognition and interpretation of composite events. This event detection procedure comprises of mainly two levels, low level and high level. The results obtained from low level can be used to analyze people behavior and aid in object detection which can be further used for high level analysis that is event detection.
+			</div>
+
+		</div>
+
+	</div><br>
+		<div class="well well-lg" >
+			<h3>&nbsp;&nbsp;Parking Ticket Dispensing</h3><br>
+			<div class="row">
+			<div class="col-lg-6">ARA Intelligent Parking Management System retrieves the time-stamp of the vehicle from the repositiory which was alloted to the vehicle at the entrance. Using the time-stamp, the fare is calculated and the parking ticket is dispensed at the exit point. This process removes any human interaction thus eliminating any human error factor.
+			</div>
+				<div class="col-lg-6">
+				<img style="margin-top: -50px;" src="{% static 'parking_ticket.jpg' %}" height="240" width="600">
+			</div>
+
+		</div>
+
+	</div>
+</div>
+	</section>
+
+	<section class="main-section" id="service1">
+		<div class="container" style="background-color:#CCCACA;border-radius: 8px;margin-top: -100px;">
+			<h2 style="margin-top: 20px;padding-bottom:10px;">Services</h2>
+			<div class="well well-lg" >
+			<div class="row">
+					<div style="margin-top: -15px;"class="service-list">
+
+						<div class="service-list-col2"><br><br>
+							<a style="word-spacing: 6px; margin-left: 50px;"class="link text-right wow fadeInUp delay-01s" id="service-list-main" href="/current_fine">
+							CHECK NEW TRAFFIC FINE / PENALTY
+							</a>
+						</div>
+					</div>
+					<div style="margin-top: -15px;"class="service-list">
+
+						<div class="service-list-col2">
+							<a style="word-spacing: 6px;margin-left: 50px;"class="link text-right wow fadeInUp delay-01s"  id="service-list-main" href="/fine_history">
+							CHECK TRAFFIC FINE / PENALTY HISTORY
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+	</section>
+
+	<section class="main-section" id="service2">
+		<div class="container" style="background-color:#CCCACA; border-radius: 8px;margin-top: -100px;">
+			<h2 style="margin-top:20px;padding-bottom: 10px;">Team</h2>
+			<div class="well well-lg" >
+			<div class="row">
+				<div class="col-lg-6">
+					<img src="{% static 'a.jpg' %}" class="img-circle" height="300" width="300" style="margin-left: 65px;">
+				</div>
+				<div class="col-lg-6">
+				<div style="font-weight: bold; font-size: 22px;" class="service-list-col2"><br><br>
+								Akarsh Sharma<br>
+								Computer Engineering Department<br>
+								NMIMS University Mumbai, India<br>
+								akarsh.sharma1999@gmail.com<br>
+						</div>
+					</div>
+				</div>
+			</div><br>
+
+					<div class="well well-lg" >
+						<div class="row">
+							<div class="col-lg-6">
+					<img src="{% static 'c.jpg' %} " class="img-circle" height="300" width="300" style="margin-left: 65px;">
+			</div>
+					<div class="col-lg-6">
+						<div style="font-weight: bold; font-size: 22px;" class="service-list-col2"><br><br>
+								Rohan Tuli<br>
+								Computer Engineering Department<br>
+								NMIMS University Mumbai, India<br>
+								rohann.tulii@gmail.com<br>
+						</div>
+					</div>
+				</div>
+			</div><br>
+
+					<div class="well well-lg" >
+						<div class="row">
+							<div class="col-lg-6">
+					<img src="{% static 'b.jpg' %}" class="img-circle" height="300" width="300" style="margin-left: 65px;">
+			</div>
+					<div class="col-lg-6">
+						<div style="font-weight: bold; font-size: 22px;" class="service-list-col2"><br><br>
+								Aakansh Togani<br>
+								Computer Engineering Department<br>
+								NMIMS University Mumbai, India<br>
+								aakanshtogani5@gmail.com<br>
+						</div>
+					</div>
+				</div>
+			</div><br>
+
+			</div>
+		</div>
+
+	</section>
+</div>
+	<!-- <footer class="footer">
+		<div class="container">
+			<div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
+			<span class="copyright">&copy; Knight Theme. All Rights Reserved</span>
+			<div class="credits">
+				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+			</div>
+		</div>
+	</footer> -->
+
+<script type="text/javascript">
+		$(document).ready(function(e) {
+
+			$('#test').scrollToFixed();
+			$('.res-nav_click').click(function() {
+				$('.main-nav').slideToggle();
+				return false
+
+			});
+
+      $('.Portfolio-box').magnificPopup({
+        delegate: 'a',
+        type: 'image'
+      });
+
+		});
+	</script>
+
+	<script>
+		wow = new WOW({
+			animateClass: 'animated',
+			offset: 100
+		});
+		wow.init();
+	</script>
+
+
+	<script type="text/javascript">
+		$(window).load(function() {
+
+			$('.main-nav li a, .servicelink').bind('click', function(event) {
+				var $anchor = $(this);
+
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top - 102
+				}, 1500, 'easeInOutExpo');
+				/*
+				if you don't want to use the easing effects:
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1000);
+				*/
+				if ($(window).width() < 768) {
+					$('.main-nav').hide();
+				}
+				event.preventDefault();
+			});
+		})
+	</script>
+
+	<script type="text/javascript">
+		$(window).load(function() {
+
+
+			var $container = $('.portfolioContainer'),
+				$body = $('body'),
+				colW = 375,
+				columns = null;
+
+
+			$container.isotope({
+				// disable window resizing
+				resizable: true,
+				masonry: {
+					columnWidth: colW
+				}
+			});
+
+			$(window).smartresize(function() {
+				// check if columns has changed
+				var currentColumns = Math.floor(($body.width() - 30) / colW);
+				if (currentColumns !== columns) {
+					// set new column count
+					columns = currentColumns;
+					// apply width to container manually, then trigger relayout
+					$container.width(columns * colW)
+						.isotope('reLayout');
+				}
+
+			}).smartresize(); // trigger resize to set container width
+			$('.portfolioFilter a').click(function() {
+				$('.portfolioFilter .current').removeClass('current');
+				$(this).addClass('current');
+
+				var selector = $(this).attr('data-filter');
+				$container.isotope({
+
+					filter: selector,
+				});
+				return false;
+			});
+
+		});
+	</script>
+
+ <footer class="footer" style="background-image: {% static 'maze.jpg' %}"; height : 300px;>
+<div class="container" style="margin-top: -20px;">
+<div class="footer-logo" style="margin:15px auto 35px;width: 76px;"><img src={% static 'PMS.png' %} alt=""></div>
+<span class="copyright" style="font-size:16px;color:#cccccc; display:block; text-align:center;">&copy; ARA INTELLIGENT PARKING MANAGEMENT SYSTEM. ALL RIGHTS RESERVED</span>
+
+
+<div class="credits" style="font-size:16px;color:#cccccc; display:block; text-align:center;">
+Designed by ARA DEVELOPMENT TEAM
+</div><br>
+<div style="margin-left: 430px;">
+<ul>
+    <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+{%load static %}
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'styles/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles/font-awesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles/responsive.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles/magnific-popup.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles/animate.css' %}" rel="stylesheet" type="text/css">
+
+        <title>ALPR</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #F2F2F2;
+
+
+}
+.bg{
+	background-color: #FFF ;
+    background-image: url({%  static 'alpr.jpg' %});
+    background-position:left;
+  	background-repeat: no-repeat;
+  	background-size: auto;
+
+
+}
+
+}
+::placeholder{
+  color:#9C9FA2 ;
+  opacity: 1;
+}
+
+#container-h {
+    background-color: #CDC9C9  ;
+    position: relative;
+    opacity: 0.9;
+    top: 20%;
+    margin-bottom: 85px;
+    width: 470px;
+    height: 1050px;
+    margin-left: 70px;
+    margin-top: -650px;
+    border-radius: 0.35em;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#container-register {
+    background-color: #1D1F20;
+    position: relative;
+    top: 20%;
+    margin: auto;
+    width: 540px;
+    height: 680px;
+    border-radius: 0.35em;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#title {
+    position: relative;
+    background-color: #343C47;
+    width: 25%;
+    margin-left: 405px;
+    padding: 18px 0px;
+    border-radius: 0.35em;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.lock {
+position: relative;
+top: 2px;
+}
+.input {
+    margin-left: 20px;
+    width: 300px;
+    border-radius: 4px;
+    background-color: #373b3d;
+    padding: 8px 0px;
+    margin-top: 20px;
+    font-size: 18px;"
+}
+.input1 {
+    margin-left: 20px;
+    width:350px;
+    border-radius: 4px;
+    background-color: #373b3d;
+    padding: 8px 0px;
+    margin-top: 20px;
+    font-size: 18px;"
+}
+
+
+
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+input[type=Number]
+{
+color: #FFF;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 6px 0px;
+    border-radius: 3px;
+
+}
+input[type=text] {
+    color: #FFF;
+    margin: 0;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=text]:focus {
+    border: 1px solid #373b3d;
+}
+
+input[type=password] {
+    color: #FFF;
+    margin: 0;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=password]:focus {
+    border: 1px solid #373b3d;
+}
+
+input[type=email] {
+    color: #949494;
+    margin: 0;
+    background-color: #373b3d;
+    border: 1px solid #373b3d;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+
+input[type=email]:focus {
+    border: 1px solid #373b3d;
+}
+.main-section{
+	padding:90px 0 110px;
+}
+
+.forgot-password {
+    position: relative;
+    bottom: 0%;
+}
+
+.forgot-password a:link {
+    color: #C1C3C6;
+    text-decoration: none;
+}
+
+.forgot-password a:visited {
+    color: #C1C3C6;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    color: #FFF;
+    transition: color 1s;
+}
+
+.privacy {
+    margin-top: 5px;
+    position: relative;
+    font-size: 12px;
+    bottom: 0%;
+}
+
+.privacy a:link {
+    color: #949494;
+    text-decoration: none;
+}
+
+.privacy a:visited {
+    color: #949494;
+    text-decoration: none;
+}
+
+.privacy a:hover {
+    color: #C1C3C6;
+    transition: color 1s;
+}
+
+*:focus {
+    outline: none;
+}
+
+.remember-me {
+    margin: 10px 0;
+}
+
+input[type=submit] {
+    padding: 6px 25px;
+    background: #373E4A;
+    color: #C1C3C6;
+    font-weight: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.register {
+    margin: auto;
+    padding: 18px 0;
+    text-align: center;
+    margin-top: 40px;
+    width: 85%;
+    border-top: 2px solid #C1C3C6;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#register-link {
+    margin-top: 10px;
+    padding: 6px 25px;
+    background: #373E4A;
+    color: #C1C3C6;
+    font-weight: bold;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.header{
+    text-align:center;
+    /*background:url("maze.jpg")left top repeat;*/
+    opacity:1;
+    padding:280px 0;
+}
+.logo{
+    width:200px;
+    margin-top:-50px;
+    margin-left:445px;
+    padding-bottom: 50px;
+}
+.header h1{
+    font-family: 'Montserrat',sans-serif;
+    font-size:70px;
+    font-weight:600;
+    letter-spacing: -1px;
+    margin:0 0 22px 0 ;
+    color:#fff ;
+}
+
+.link{
+    padding:8px 16px;
+    background:#343C47 ;
+    color:#fff;
+    opacity:0.8;
+    font-size:22px;
+    font-weight:500;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.7px;
+    display:inline-block;
+    border-radius:4px;
+    text-transform:uppercase;
+    line-height:25px;
+    margin-bottom:20px;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+.link:hover {
+    text-decoration:none;
+    color:#fff;
+    background:#1A1C1D;
+}
+
+.link:active, .link:focus {
+    background:#1A1C1D;
+    text-decoration:none;
+    color:#fff;
+}
+ ul {
+    overflow: auto;
+}
+
+ul li {
+    list-style-type: none;
+    float: left;
+}
+
+ul li a i {
+    background: #205D7A;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+.fa-facebook {
+    background:#3b5998
+}
+.fa-linkedin {
+    background:#007bb6
+}
+.fa-twitter {
+    background:#00aced
+}
+.google-plus {
+    background:#F02A2A
+}
+ul li a i:hover {
+    opacity: .7;
+}
+    </style>
+</head>
+
+<body>
+	<div class="bg">
+    <header class="header" id="header">
+    <div style="margin-top: -215px;" class="container">
+        <figure class="logo animated fadeInDown delay-03s">
+                <a href="#"><img src={% static 'PMS.png' %} alt=""></a>
+            </figure>
+        <section class="main-section">
+    		<h1 style="margin-top: -80px;">UPLOAD YOUR VEHICLE LICENSE PLATE HERE AND WE WILL TAKE CARE OF THE REST</h1><br>
+    		<h3 style="font-weight: bold;color:#fff;font-size: 19px;">ENSURE THAT YOUR IMAGE SIZE IS LESS THAN 250 KB.</h3>
+    	</section>
+
+{#        <form action="#" method="POST" style="opacity: 0.95">#}
+{##}
+{#            {% csrf_token %}#}
+{#        	<div style="margin-top: -20px;margin-left: 420px;"class="input animated fadeInUp delay-07s">#}
+{#                <input id="fname" name="fname" placeholder="Enter your full name :" type="text">#}
+{#                <br>#}
+{#                <input id="fine" name="fine" placeholder="Enter Fine Amount : " type="text">#}
+{#            </div>#}
+{#            <div style="margin-left: 400px;margin-top: 55px;"class="input1 animated fadeInUp delay-07s">#}
+{##}
+{#               <label style="background-color: #373b3d;border-color:#373b3d;color:#9C9FA2;font-size: 18px;font-weight:1">Select image to upload</label><br>#}
+{#            <input type="file" name="Upload" id="Upload" style="padding-left: 10px;margin-top: 10px;">#}
+{#            </div><br><br><br>#}
+{##}
+{#            <input style="margin-left:-25px; " class="link animated fadeInUp delay-07s" type="submit" name="submit" value="UPLOAD"/>#}
+{#        </form>#}
+        <form  method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input style="margin-left:-25px; " class="link animated fadeInUp delay-07s" type="submit" name="submit" value="UPLOAD"/>
+        </form>
+            </div>
+          </header>
+</div>
+</body>
+
+</html>
